@@ -3,41 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anna Robert Photography & Scrapbooking</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>Anna Robert's Scrapbooking Studio</title>
     <style>
-       
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #ffcccb; /* Soft pink */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .logo:hover {
+            color: #ff6666; /* Bright coral on hover */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff6666; /* Bright coral on hover */
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #ffe6e6; /* Light pastel pink */
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: #ff6666; /* Bright coral */
+            transition: transform 0.3s ease;
+        }
+
+        .hero h1:hover {
+            transform: scale(1.05);
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .cta-buttons .btn {
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .primary-btn {
+            background-color: #ff6666; /* Bright coral */
+            color: white;
+            margin-right: 10px;
+        }
+
+        .secondary-btn {
+            background-color: white;
+            color: #ff6666;
+            border: 2px solid #ff6666;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 0;
+            background-color: #f5f5f5;
+        }
+
+        .feature {
+            text-align: center;
+            width: 30%;
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 50px;
+            text-align: center;
+            background-color: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #ffe6e6; /* Light pastel pink */
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .testimonial {
+            margin-bottom: 20px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .testimonial:hover {
+            opacity: 1;
+        }
+
+        .testimonial p {
+            font-size: 18px;
+            font-style: italic;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #ffcccb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ff6666; /* Coral hover */
+        }
+
     </style>
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <div class="logo">
-            <h1>Anna Robert</h1>
-            <p>Photography & Scrapbooking</p>
-        </div>
+        <div class="logo">Anna's Scrapbooking</div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/about.html">About</a></li>
-                <li><a href="pages/services.html">Services</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h2>Welcome to Anna's Photography & Scrapbooking</h2>
-        <p>Capture memories and craft your unique scrapbook in a friendly, relaxing environment.</p>
+        <div class="hero-content">
+            <h1>Welcome to Anna's Scrapbooking Studio</h1>
+            <p>Craft the moments that matter. Join our scrapbooking courses and shop for the best products.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn primary-btn">Join a Course</a>
+                <a href="#" class="btn secondary-btn">Shop Now</a>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Anna Robert | Photography & Scrapbooking</p>
-        <div class="social-media">
-            <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+    <!-- Featured Sections -->
+    <section class="features">
+        <div class="feature">
+            <h2>Our Courses</h2>
+            <p>From beginners to advanced, learn the art of scrapbooking with our in-studio or online courses.</p>
+            <a href="#" class="btn secondary-btn">Explore Courses</a>
         </div>
+        <div class="feature">
+            <h2>Shop Scrapbooking Essentials</h2>
+            <p>Find high-quality materials and tools for your perfect scrapbook projects.</p>
+            <a href="#" class="btn secondary-btn">Shop Now</a>
+        </div>
+        <div class="feature">
+            <h2>Custom Scrapbook Albums</h2>
+            <p>Work with Anna to create personalized scrapbook albums, perfect for gifts or keepsakes.</p>
+            <a href="#" class="btn secondary-btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <h2>Our Work</h2>
+        <div class="gallery-grid">
+            <img src="gallery1.jpg" alt="Scrapbook Design 1">
+            <img src="gallery2.jpg" alt="Scrapbook Design 2">
+            <img src="gallery3.jpg" alt="Scrapbook Design 3">
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial">
+            <p>"The coffee and kids' play area made it so easy to relax and focus on my scrapbooking. Loved the courses!"</p>
+            <span>- Sarah P.</span>
+        </div>
+        <div class="testimonial">
+            <p>"Anna's scrapbooking design made for the perfect wedding gift. My daughter loved it!"</p>
+            <span>- Jessica W.</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Anna's Scrapbooking Studio | Follow us:
+            <a href="#">Instagram</a> |
+            <a href="#">Facebook</a> |
+            <a href="#">Pinterest</a>
+        </p>
     </footer>
 </body>
 </html>
