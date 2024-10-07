@@ -95,7 +95,10 @@
             padding: 100px 0;
             text-align: center;
             position: relative;
+            height: 80vh;
         }
+
+        
 
         .hero h1 {
             font-size: 48px;
