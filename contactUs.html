@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/contactUs.css">
 
     <title>Scrapping Studio</title>
 </head>
@@ -28,7 +28,7 @@
                         <a href="#products" class="nav__link">Services</a>
                     </li>
                     <li class="nav__item">
-                        <a href="contactUs.html" class="nav__link">ContactUs</a>
+                        <a href="#new" class="nav__link">ContactUs</a>
                     </li>
                 </ul>
 
@@ -60,20 +60,38 @@
                 </div>
 
                 <div class="home__data">
-                    <h1 class="home__title">JUST <br>SCRAPPING STUDIOS </h1>
+                    <h1 class="home__title">Contact Us</h1>
                     <p class="home__description">
-                        Learn with Anna Robert
+                        We would love to hear from you! Please fill out the form below to get in touch.
                     </p>
-
-
-                    <div class="home__btns">
-                        <a href="#" class="button button--gray button--small">
-                            About Me
-                        </a>
-
-                        <button class="button home__button">SHOP NOW</button>
-                    </div>
+                
+                    <form class="contact__form" action="#" method="POST">
+                        <div class="form__group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                
+                        <div class="form__group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                
+                        <div class="form__group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                
+                        
+                
+                        <div class="form__group">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                        </div>
+                
+                        <button type="submit" class="button home__button">Submit</button>
+                    </form>
                 </div>
+                
             </div>
         </section>
         <footer class="footer section">
