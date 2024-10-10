@@ -438,7 +438,8 @@ a {
     }
 
     .ultimateImg {
-        width: 100%;
+        width: 80%;
+        margin-top: 30px;
     }
 
     .purpleBox {
@@ -497,7 +498,7 @@ a {
 
 @media (max-width: 500px) {
     .responsive-container-block.Container {
-        padding-top: 10px;
+        padding-top: 0px;
         padding-right: 0px;
         padding-bottom: 10px;
         padding-left: 0px;
