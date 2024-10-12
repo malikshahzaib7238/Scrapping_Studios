@@ -1,169 +1,292 @@
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF5EE;
+    color: #333;
+}
 
-        /* Header Styling */
-        header {
-            position: relative;
-            background-color: #ffcccb; /* Soft pink */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+* {
+    box-sizing: border-box;
+    max-width: 100vw; /* Ensure no element exceeds the viewport width */
+}
 
-        .logo {
-            font-size: 26px;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
+/* Header Styling - Make navigation bar transparent */
+header {
+    position: absolute; /* Position it on top of the hero section */
+    width: 100%;
+    background-color: transparent; /* Transparent background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-left: 20px; */
+    padding-right: 20px;
+    padding-bottom: 20px;
+    z-index: 100; /* Ensure it stays above other content */
+}
 
-        .logo:hover {
-            color: #ff6666; /* Bright coral on hover */
-        }
+/* Navigation Menu */
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    color: #ff6666; /* Bright coral on hover */
 
-        /* Navigation Menu */
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-            margin: 0;
-            padding: 0;
-        }
+}
+.logo img {
+    height: 100px; /* Adjust the logo size */
+    /* width: 100px; */
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
+.logo:hover {
+    color: #ff6666; /* Bright coral on hover */
+}
 
-        nav ul li a:hover {
-            color: #ff6666; /* Bright coral on hover */
-        }
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
 
-        /* Hide the checkbox input */
-        .nav-toggle {
-            display: none;
-        }
+nav ul li a {
+    text-decoration: none;
+    color: #ff6666;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
 
-        /* Hamburger Menu Icon */
-        .nav-toggle-label {
-            display: none;
-            cursor: pointer;
-            width: 30px;
-            height: 25px;
-            position: relative;
-        }
+nav ul li a:hover {
+    color: #ff6666; /* Bright coral on hover */
+}
 
-        .nav-toggle-label span,
-        .nav-toggle-label span::before,
-        .nav-toggle-label span::after {
-            display: block;
-            background: #333;
-            height: 3px;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            transition: all 0.3s;
-        }
+/* Hide the checkbox input */
+.nav-toggle {
+    display: none;
+}
 
-        .nav-toggle-label span {
-            top: 50%;
-            margin-top: -1.5px;
-        }
+/* Hamburger Menu Icon */
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: relative;
+}
 
-        .nav-toggle-label span::before {
-            content: '';
-            top: -8px;
-        }
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: #333;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+}
 
-        .nav-toggle-label span::after {
-            content: '';
-            top: 8px;
-        }
+.nav-toggle-label span {
+    top: 50%;
+    margin-top: -1.5px;
+}
 
-        /* Hero Section */
-        .hero {
-            background-color: #ffe6e6; /* Light pastel pink */
-            padding: 100px 0;
-            text-align: center;
-            position: relative;
-            height: 80vh;
-        }
+.nav-toggle-label span::before {
+    content: '';
+    top: -8px;
+}
 
-        
+.nav-toggle-label span::after {
+    content: '';
+    top: 8px;
+}
 
-        .hero h1 {
-            font-size: 48px;
-            color: #ff6666; /* Bright coral */
-            transition: transform 0.3s ease;
-        }
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
 
-        .hero h1:hover {
-            transform: scale(1.05);
-        }
+/* Video Background */
+#bg-video {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the hero section */
+    z-index: -1; /* Ensure it stays behind the text content */
+}
 
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+}
 
-        .cta-buttons .btn {
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            display: inline-block;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
+.hero h1 {
+    font-size: 48px;
+    color: white;
+    transition: transform 0.3s ease;
+}
 
-        .primary-btn {
-            background-color: #ff6666; /* Bright coral */
-            color: white;
-            margin-right: 10px;
-        }
+.hero h1:hover {
+    transform: scale(1.05);
+}
 
-        .secondary-btn {
-            background-color: white;
-            color: #ff6666;
-            border: 2px solid #ff6666;
-        }
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
 
-        .btn:hover {
-            transform: scale(1.05);
-        }
+.cta-buttons .btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #ff6666;
+    color: white;
+    margin-right: 10px;
+}
+
+.secondary-btn {
+    background-color: white;
+    color: #ff6666;
+    border: 2px solid #ff6666;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Rest of the styling remains unchanged */
+
 
         /* Features Section */
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 50px 0;
-            background-color: #f5f5f5;
-        }
+#features {
+    padding: 40px 20px;
+    text-align: center;
+      background-color: #FFF5EE;
+    color: #ff6666;
+}
 
-        .feature {
-            text-align: center;
-            width: 100%;
-            margin: 10px 0;
-            transition: transform 0.3s ease;
-        }
+h2 {
+    margin-bottom: 20px;
+    position: relative;
+    color: #ff6666
 
-        .feature:hover {
-            transform: translateY(-10px);
-        }
+}
 
-        .feature h2 {
-            color: #333;
-            margin-bottom: 15px;
-        }
+h2::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #ff6666;
+    margin: 0 auto 10px auto;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #ff6666;
+    margin: 10px auto 0 auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature-box {
+    position: relative; 
+    background-color: yellow;
+    border-radius: 8px; 
+    transition: transform 0.3s ease;
+    overflow: hidden; 
+    height: 70vh;
+    display: grid;
+    
+}
+
+.feature-box img {
+    max-width: 100%; 
+    height: 100%;
+}
+
+.featureimage {
+    object-fit:fill;
+    height: 100%;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+}
+
+.feature-box:hover .overlay {
+    opacity: 1; 
+}
+
+.feature-box:hover {
+    transform: scale(1.05);
+}
+
+.overlay-text {
+    font-size: 20px; 
+    text-align: center; 
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 786px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 586px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
         /* Gallery Section */
         .gallery {
@@ -189,7 +312,7 @@
 
         /* Testimonials Section */
         .testimonials {
-            background-color: #ffe6e6; /* Light pastel pink */
+            /* background-color: #ffe6e6; Light pastel pink */
             padding: 50px 0;
             text-align: center;
         }
@@ -210,23 +333,69 @@
             color: #333;
         }
 
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+       /* Footer */
+.footer {
+    background: #953553;
+    padding: 30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+}
 
-        footer a {
-            color: #ffcccb;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: white;
+    font-size: 0.8em;
+}
 
-        footer a:hover {
-            color: #ff6666; /* Coral hover */
-        }
+.footer .row a {
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: #fff;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.footer .row img.social-icon {
+    width: 40px; /* Set the size of the social media icons */
+    height: 40px;
+    margin: 0 10px; /* Space between icons */
+    transition: transform 0.3s;
+}
+
+.footer .row img.social-icon:hover {
+    transform: scale(1.1); /* Hover effect: enlarge the icon slightly */
+}
+
+@media (max-width: 720px) {
+    .footer {
+        text-align: left;
+        padding: 5%;
+    }
+
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+    }
+
+    .footer .row img.social-icon {
+        margin: 0% 3%; /* Adjust spacing for smaller screens */
+    }
+}
+
 
         /* Media Queries for Responsiveness */
 

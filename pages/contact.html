@@ -9,7 +9,9 @@
 <body>
     <!-- Header Section -->
     <header>
-        <div class="logo">Anna's Scrapbooking</div>
+        <div class="logo">
+            <img src="../assets/Designer.png" alt="logo" />
+        </div>
         <!-- Hidden Checkbox Input -->
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <!-- Label for the Checkbox as Hamburger Icon -->
@@ -20,35 +22,58 @@
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="announcements.html">Announcements</a></li>
-                <li><a href="contact.html">Contact</a></li>
-
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/services.html">Services</a></li>
+                <li><a href="../pages/announcements.html">Announcements</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Contact Form Section -->
-    <section>
-        <h2>Contact Us</h2>
-        <form action="#" method="POST">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" required></textarea><br><br>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Anna Robert | Photography & Scrapbooking</p>
-        <div class="social-media">
-            <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Left Column: Hero Content -->
+        <div class="hero-content">
+            <h1>Get in Touch</h1>
+            <p>We'd love to hear from you! Fill out the form below to reach us.</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <div class="cta-buttons">
+                    <button type="submit" class="btn primary-btn">Send Message</button>
+                </div>
+            </form>
         </div>
-    </footer>
+        <div class="hero-image">
+            <img src="../assets/scrap1.jpg" alt="Contact Us">
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <a href="#"><img src="../assets/insta.png" alt="Instagram" class="social-icon"></a>
+                <a href="#"><img src="../assets/youtube.webp" alt="YouTube" class="social-icon"></a>
+                <a href="#"><img src="../assets/twitter.png" alt="Twitter" class="social-icon"></a>
+            </div>
+        
+        <div class="row">
+        <ul>
+            <li><a href="pages/about.html">About Us</a></li>
+        <li><a href="../pages/contact.html">Contact us</a></li>
+        <li><a href="../pages/services.html">Our Services</a></li>
+        <li><a href="../pages/announcements.html">Announcements</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+        </div>
+        
+        <div class="row">
+        ANNA SCRAPBOOKING STUDIO © 2024 - All rights reserved
+        </div>
+        </div>
+        </footer>
 </body>
 </html>

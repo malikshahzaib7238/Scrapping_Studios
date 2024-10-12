@@ -1,5 +1,5 @@
- /* General Styles */
- body {
+/* General Styles */
+body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -7,22 +7,43 @@
     color: #333;
 }
 
-/* Header Styling */
+* {
+    box-sizing: border-box;
+    max-width: 100vw; /* Ensure no element exceeds the viewport width */
+}
+
+/* Header Styling - Make navigation bar transparent */
 header {
-    position: relative;
-    background-color: #ffcccb; /* Soft pink */
+    position: absolute; /* Position it on top of the hero section */
+    width: 100%;
+    background-color: transparent; /* Transparent background */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-right: 20px;
+    padding-bottom: 20px;
+        z-index: 100; /* Ensure it stays above other content */
 }
 
+@media (max-width: 768px) {
+    header {
+        position: relative;
+    }
+}
+
+/* Navigation Menu */
 .logo {
     font-size: 26px;
     font-weight: bold;
     transition: color 0.3s ease;
+    color: #ff6666; /* Bright coral on hover */
+
 }
+.logo img {
+    height: 100px; /* Adjust the logo size */
+    /* width: 100px; */
+}
+
 
 .logo:hover {
     color: #ff6666; /* Bright coral on hover */
@@ -39,7 +60,7 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #ff6666; /* Bright coral on hover */
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -89,99 +110,263 @@ nav ul li a:hover {
     top: 8px;
 }
 
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background-color: white;
+}
 
-       /* Media Queries for Responsiveness */
+.hero-content, .hero-image {
+    padding: 20px;
+}
 
-        /* For screens larger than 1024px */
-        @media (min-width: 1024px) {
-            .gallery-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
+/* Left column: Hero Content */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #333;
+}
 
-            .feature {
-                width: 30%;
-                margin: 1%;
-            }
-        }
+/* Right column: Hero Image */
+.hero-image img {
+    width: 100%; /* Ensure the image fills its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners */
+}
 
-        /* For screens between 768px and 1023px */
-        @media (min-width: 768px) and (max-width: 1023px) {
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between form elements */
+}
 
-            .feature {
-                width: 48%;
-                margin: 1%;
-            }
-        }
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Full width */
+}
 
-        /* For screens smaller than 768px */
-        @media (max-width: 767px) {
-            /* Hide the nav menu */
-            nav {
-                display: none;
-            }
+input:focus, textarea:focus {
+    border-color: #ff6666; /* Change border color on focus */
+}
 
-            /* Show the hamburger icon */
-            .nav-toggle-label {
-                display: block;
-            }
+.btn {
+    align-self: flex-start; /* Align button to the left */
+    padding: 10px 20px; /* Ensure button has padding */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+}
 
-            /* Adjust header layout */
-            header {
-                justify-content: space-between;
-            }
+/* For smaller screens, stack the image above the content */
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 15%;
+        flex-direction: column; /* Stack image and text */
+        text-align: center; /* Center text for smaller screens */
+    }
 
-            /* Display the nav menu when checkbox is checked */
-            .nav-toggle:checked + .nav-toggle-label + nav {
-                display: block;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background-color: #ffcccb; /* Same as header background */
-                z-index: 10;
-                transition: 1s ease;
-            }
+    .hero-image {
+        order: -1; /* Move the image above the text */
+    }
 
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                padding: 0;
-                margin: 0;
-            }
+    .hero-image img {
+        width: 80%;
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 8px; /* Optional: rounded corners */
+    }
 
+    .hero-content {
+        padding-top: 20px; /* Adjust padding for smaller screens */
+    }
+}
 
-            nav ul li {
-                margin: 15px 0;
-                
-            }
+.hero h1 {
+    font-size: 48px;
+    color: #ff6666;
+    transition: transform 0.3s ease;
+}
 
+.hero h1:hover {
+    transform: scale(1.05);
+}
 
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
 
-            /* Transform the hamburger icon into a close (X) when checked */
-            .nav-toggle:checked + .nav-toggle-label span {
-                background: transparent;
-            }
+.cta-buttons .btn {
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-            .nav-toggle:checked + .nav-toggle-label span::before {
-                transform: rotate(45deg);
-                top: 0;
-            }
+.primary-btn {
+    background-color: #ff6666;
+    color: white;
+}
 
-            .nav-toggle:checked + .nav-toggle-label span::after {
-                transform: rotate(-45deg);
-                top: 0;
-            }
+.secondary-btn {
+    background-color: white;
+    color: #ff6666;
+    border: 2px solid #ff6666;
+}
 
-            /* Gallery Section for small screens */
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
+.btn:hover {
+    transform: scale(1.05);
+}
 
-            /* Feature Section for small screens */
-            .feature {
-                width: 100%;
-            }
-        }
+/* Rest of the styling remains unchanged */
+h2 {
+    margin-bottom: 20px;
+    position: relative;
+    color: #ff6666;
+}
+
+h2::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #ff6666;
+    margin: 0 auto 10px auto;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #ff6666;
+    margin: 10px auto 0 auto;
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 767px) {
+    /* Hide the nav menu */
+    nav {
+        display: none;
+    }
+
+    /* Show the hamburger icon */
+    .nav-toggle-label {
+        display: block;
+    }
+
+    /* Adjust header layout */
+    header {
+        justify-content: space-between;
+    }
+
+    /* Display the nav menu when checkbox is checked */
+    .nav-toggle:checked + .nav-toggle-label + nav {
+        display: block;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #ffcccb; /* Same as header background */
+        z-index: 10;
+        transition: 1s ease;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    /* Transform the hamburger icon into a close (X) when checked */
+    .nav-toggle:checked + .nav-toggle-label span {
+        background: transparent;
+    }
+
+    .nav-toggle:checked + .nav-toggle-label span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .nav-toggle:checked + .nav-toggle-label span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    
+}
+
+ /* Footer */
+ .footer {
+    background: #953553;
+    padding: 30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+}
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: white;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: #fff;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.footer .row img.social-icon {
+    width: 40px; /* Set the size of the social media icons */
+    height: 40px;
+    margin: 0 10px; /* Space between icons */
+    transition: transform 0.3s;
+}
+
+.footer .row img.social-icon:hover {
+    transform: scale(1.1); /* Hover effect: enlarge the icon slightly */
+}
+
+@media (max-width: 720px) {
+    .footer {
+        text-align: left;
+        padding: 5%;
+    }
+
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+    }
+
+    .footer .row img.social-icon {
+        margin: 0% 3%; /* Adjust spacing for smaller screens */
+    }
+}
+

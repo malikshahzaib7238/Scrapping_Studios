@@ -7,57 +7,224 @@
     <link rel="stylesheet" href="../css/services.css">
 </head>
 <body>
+
+    <!-- Video Background -->
+    <!-- <div class="video-background">
+        <video autoplay muted loop>
+            <source src="../assets/bg1.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div> -->
+
+    <!-- Header Section -->
     <header>
-        <div class="logo">Anna's Scrapbooking</div>
-        <!-- Hidden Checkbox Input -->
+        <div class="logo">
+            <img src="../assets/Designer.png" alt="logo" />
+        </div>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <!-- Label for the Checkbox as Hamburger Icon -->
         <label for="nav-toggle" class="nav-toggle-label">
             <span></span>
         </label>
-        <!-- Navigation Menu -->
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="announcements.html">Announcements</a></li>
-                <li><a href="contact.html">Contact</a></li>
-
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/services.html">Services</a></li>
+                <li><a href="../pages/announcements.html">Announcements</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
-        <h2>Our Services</h2>
-        <ul>
-            <li>Photography Sessions</li>
-            <li>Scrapbook Courses & Training (1 on 1 and Online)</li>
-            <li>Custom Scrapbook Albums</li>
-            <li>Scrapbook Products</li>
-        </ul>
-        <h3>Pricing Table</h3>
-        <table>
-            <tr>
-                <th>Service</th>
-                <th>Price</th>
-            </tr>
-            <tr>
-                <td>Photography Session</td>
-                <td>$200</td>
-            </tr>
-            <tr>
-                <td>Scrapbook Course</td>
-                <td>$100</td>
-            </tr>
-        </table>
-    </section>
+    <main>
+        <!-- Photography Sessions Section -->
+        <section class="photography">
+            <h2>Photography Sessions</h2>
+            <div class="grid-container">
+                <div class="photo-box">
+                    <img src="../assets/photo10.jpg" alt="Photography 1">
+                    <div class="overlay">
+                        <div class="overlay-text">Photography Session 1 Description</div>
+                    </div>
+                </div>
+                <div class="photo-box">
+                    <img src="../assets/photo11.jpg" alt="Photography 2">
+                    <div class="overlay">
+                        <div class="overlay-text">Photography Session 2 Description</div>
+                    </div>
+                </div>
+                <div class="photo-box">
+                    <img src="../assets/photo12.jpg" alt="Photography 3">
+                    <div class="overlay">
+                        <div class="overlay-text">Photography Session 3 Description</div>
+                    </div>
+                </div>
+                <div class="photo-box">
+                    <img src="../assets/photo1.jpg" alt="Photography 4">
+                    <div class="overlay">
+                        <div class="overlay-text">Photography Session 4 Description</div>
+                    </div>
+                </div>
+                <div class="photo-box">
+                    <img src="../assets/photo5.jpg" alt="Photography 5">
+                    <div class="overlay">
+                        <div class="overlay-text">Photography Session 5 Description</div>
+                    </div>
+                </div>
+                <div class="photo-box">
+                    <img src="../assets/photo6.jpg" alt="Photography 6">
+                    <div class="overlay">
+                        <div class="overlay-text">Photography Session 6 Description</div>
+                    </div>
+                </div>
+                <div class="photo-box">
+                    <img src="../assets/photo7.jpg" alt="Photography 7">
+                    <div class="overlay">
+                        <div class="overlay-text">Photography Session 7 Description</div>
+                    </div>
+                </div>
+                <div class="photo-box">
+                    <img src="../assets/photo8.jpg" alt="Photography 8">
+                    <div class="overlay">
+                        <div class="overlay-text">Photography Session 8 Description</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Courses Section -->
+        <section class="courses">
+            <h2>Scrapbook Courses</h2>
+            <div class="grid-container">
+                <div class="course-box">
+                    <img src="../assets/courses1.jpg" alt="Course 1">
+                    <div class="overlay">
+                        <div class="overlay-text">Course 1 Description</div>
+                    </div>
+                </div>
+                <div class="course-box">
+                    <img src="../assets/courses6.jpg" alt="Course 2">
+                    <div class="overlay">
+                        <div class="overlay-text">Course 2 Description</div>
+                    </div>
+                </div>
+                <div class="course-box">
+                    <img src="../assets/courses3.jpeg" alt="Course 3">
+                    <div class="overlay">
+                        <div class="overlay-text">Course 3 Description</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Training Section -->
+        <section class="training">
+            <h2>Training</h2>
+            <div class="training-content">
+                <div class="training-text">
+                    <p>Join our expert-led training sessions to enhance your scrapbooking skills. We offer both in-person and online options.</p>
+                    <button class="sign-up-button">Sign Up Now</button>
+                </div>
+                <div class="training-image">
+                    <img src="../assets/courses4.jpg" alt="Training Session">
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products">
+            <h2>Scrapbook Products</h2>
+            <div class="grid-container">
+                <div class="product-box">
+                    <img src="../assets/product1.jpg" alt="Product 1" class="product-image">
+                    <div class="overlay">
+                        <div class="overlay-text">Stickers</div>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <img src="../assets/product2.jpg" alt="Product 2" class="product-image">
+                    <div class="overlay">
+                        <div class="overlay-text">Summer Themed Sticker</div>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <img src="../assets/product3.jpg" alt="Product 3" class="product-image">
+                    <div class="overlay">
+                        <div class="overlay-text">Journal Book Sticker</div>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <img src="../assets/product4.jpg" alt="Product 4" class="product-image">
+                    <div class="overlay">
+                        <div class="overlay-text">Flower Stickers</div>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <img src="../assets/product5.jpg" alt="Product 5" class="product-image">
+                    <div class="overlay">
+                        <div class="overlay-text">Origami Sticekr</div>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <img src="../assets/product7.jpg" alt="Product 6" class="product-image">
+                    <div class="overlay">
+                        <div class="overlay-text">Scrap Books</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing">
+            <h2>Pricing Table</h2>
+            <table>
+                <tr>
+                    <th>Service</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Photography Session</td>
+                    <td>$200</td>
+                </tr>
+                <tr>
+                    <td>Scrapbook Course</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Custom Scrapbook Album</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Scrapbook Products</td>
+                    <td>Varies</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Anna Robert | Photography & Scrapbooking</p>
-        <div class="social-media">
-            <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+        <div class="footer">
+            <div class="row">
+                <a href="#"><img src="../assets/insta.png" alt="Instagram" class="social-icon"></a>
+                <a href="#"><img src="../assets/youtube.webp" alt="YouTube" class="social-icon"></a>
+                <a href="#"><img src="../assets/twitter.png" alt="Twitter" class="social-icon"></a>
+            </div>
+        
+        <div class="row">
+        <ul>
+            <li><a href="pages/about.html">About Us</a></li>
+        <li><a href="../pages/contact.html">Contact us</a></li>
+        <li><a href="../pages/services.html">Our Services</a></li>
+        <li><a href="../pages/announcements.html">Announcements</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        </ul>
         </div>
-    </footer>
+        
+        <div class="row">
+        ANNA SCRAPBOOKING STUDIO © 2024 - All rights reserved
+        </div>
+        </div>
+        </footer>
 </body>
 </html>
