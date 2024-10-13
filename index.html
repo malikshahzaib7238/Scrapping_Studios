@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anna Robert's Scrapbooking Studio</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
 
 </head>
 
@@ -36,15 +39,15 @@
     <!-- Hero Section -->
     <section class="hero">
         <!-- Video Background -->
-        <video id="bg-video" autoplay muted loop playsinline></video>
+        <video id="bg-video" src="assets/bg4.mp4" autoplay muted loop playsinline></video>
 
         <!-- Hero Content -->
         <div class="hero-content">
             <h1>Welcome to Anna's Scrapbooking Studio</h1>
             <p>Craft the moments that matter. Join our scrapbooking courses and shop for the best products.</p>
             <div class="cta-buttons">
-                <a href="#" class="btn primary-btn">Join a Course</a>
-                <a href="#" class="btn secondary-btn">Shop Now</a>
+                <a href="pages/about.html" class="btn primary-btn">About Us</a>
+                <a href="pages/services.html" class="btn secondary-btn">Shop Now</a>
             </div>
         </div>
     </section>
@@ -101,23 +104,10 @@
         </div>
     </section>
 
-    <!-- Gallery Section
-    <section class="gallery">
-        <h2>Our Work</h2>
-        <div class="gallery-grid">
-            <img src="assets/scrap1.jpg" alt="Scrapbook Design 1">
-            <img src="assets/scrap1.jpg" alt="Scrapbook Design 2">
-            <img src="assets/scrap3.jpg" alt="Scrapbook Design 3">
-            <img src="assets/scrap1.jpg" alt="Scrapbook Design 1">
-            <img src="assets/scrap3.jpg" alt="Scrapbook Design 1">
-            <img src="assets/scrap3.jpg" alt="Scrapbook Design 3">
-
-        </div>
-    </section> -->
 
     <!-- Testimonials Section -->
     <section class="testimonials">
-        <h2>What Our Customers Say</h2>
+        <h2>Testimonials</h2>
         <div class="testimonial">
             <p>"The coffee and kids' play area made it so easy to relax and focus on my scrapbooking. Loved the
                 courses!"</p>
@@ -155,26 +145,6 @@
         </footer>
         
 
-    <!-- Add JavaScript for handling the video loop -->
-    <script>
-        const videoElement = document.getElementById('bg-video');
-        const videoSources = [
-            'assets/bg4.mp4',
-            'assets/bg2.mp4',
-            'assets/bg3.mp4',
-        ];
-        let videoIndex = 0;
-
-        function playNextVideo() {
-            videoElement.src = videoSources[videoIndex];
-            videoElement.load();
-            videoElement.play();
-            videoIndex = (videoIndex + 1) % videoSources.length;
-        }
-
-        videoElement.addEventListener('ended', playNextVideo);
-        playNextVideo(); // Start the loop
-    </script>
 </body>
 
 </html>

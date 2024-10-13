@@ -5,6 +5,8 @@ body {
     padding: 0;
     background-color: #FFF5EE;
     color: #333;
+    font-family: 'Syne', sans-serif;
+
 }
 
 * {
@@ -105,7 +107,7 @@ nav ul li a:hover {
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
     display: block;
-    background: #333;
+    background-color: #953553;
     height: 3px;
     width: 100%;
     position: absolute;
@@ -116,15 +118,21 @@ nav ul li a:hover {
 .nav-toggle-label span {
     top: 50%;
     margin-top: -1.5px;
+    background-color: #953553;
+
 }
 
 .nav-toggle-label span::before {
     content: '';
     top: -8px;
+    background-color: #953553;
+
 }
 
 .nav-toggle-label span::after {
     content: '';
+    background-color: #953553;
+
     top: 8px;
 }
 
@@ -153,7 +161,7 @@ nav ul li a:hover {
         top: 70px;
         left: 0;
         width: 100%;
-        background-color: #FFF5EE; /* Same as header background */
+        background-color: #ffcccb; /* Same as header background */
         z-index: 10;
         transition: 1s ease;
     }
@@ -172,15 +180,20 @@ nav ul li a:hover {
     /* Transform the hamburger icon into a close (X) when checked */
     .nav-toggle:checked + .nav-toggle-label span {
         background: transparent;
+
     }
 
     .nav-toggle:checked + .nav-toggle-label span::before {
         transform: rotate(45deg);
+        background-color: #953553;
+
         top: 0;
     }
 
     .nav-toggle:checked + .nav-toggle-label span::after {
         transform: rotate(-45deg);
+        background-color: #953553;
+
         top: 0;
     }
 
@@ -436,7 +449,6 @@ tr:hover {
  .footer {
     background: #953553;
     padding: 30px 0px;
-    font-family: 'Play', sans-serif;
     text-align: center;
 }
 
@@ -528,29 +540,7 @@ tr:hover {
         width: 100%; /* Ensure the image scales properly */
     }
 
-    nav ul {
-        flex-direction: column;
-        display: none;
-    }
+    
 
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .nav-toggle:checked + .nav-toggle-label + nav ul {
-        display: flex;
-    }
-
-    .nav-toggle-label {
-        display: block;
-        cursor: pointer;
-    }
-
-    .nav-toggle-label span {
-        display: block;
-        width: 30px;
-        height: 3px;
-        background: white;
-        margin: 6px 0;
-    }
+   
 }

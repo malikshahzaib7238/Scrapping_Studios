@@ -3,8 +3,10 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #FFF5EE;
     color: #333;
+    font-family: 'Syne', sans-serif;
+
 }
 
 * {
@@ -98,26 +100,32 @@ nav ul li a:hover {
 .nav-toggle-label span {
     top: 50%;
     margin-top: -1.5px;
+    background-color: #953553;
+
 }
 
 .nav-toggle-label span::before {
     content: '';
     top: -8px;
+    background-color: #953553;
+
 }
 
 .nav-toggle-label span::after {
     content: '';
     top: 8px;
+    background-color: #953553;
+
 }
 
 /* Hero Section */
 .hero {
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
     align-items: center;
     height: 100vh;
     padding: 20px;
-    background-color: white;
+    background-color: #FFF5EE;
 }
 
 .hero-content, .hero-image {
@@ -127,14 +135,21 @@ nav ul li a:hover {
 /* Left column: Hero Content */
 .hero-content {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     color: #333;
+    font-family: 'Syne', sans-serif;
+
 }
 
 /* Right column: Hero Image */
-.hero-image img {
+.hero-image {
+    display: flex; /* Enable Flexbox */
+    justify-content:center; /* Align content to the right */
+    align-items: center; /* Vertically center the content */
+    flex: 1;
     width: 100%; /* Ensure the image fills its container */
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Optional: rounded corners */
@@ -144,6 +159,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px; /* Space between form elements */
+    width: 80%;
 }
 
 input, textarea {
@@ -167,23 +183,31 @@ input:focus, textarea:focus {
 /* For smaller screens, stack the image above the content */
 @media (max-width: 768px) {
     .hero {
-        margin-top: 15%;
+        /* margin-top: 15%; */
+        height: auto;
         flex-direction: column; /* Stack image and text */
+        align-items: center; /* Center contents horizontally */
+        justify-content: center; /* Center contents vertically */
         text-align: center; /* Center text for smaller screens */
+        /* padding: 20px;Center text for smaller screens */
     }
 
     .hero-image {
         order: -1; /* Move the image above the text */
+        display: flex;
+        justify-content: center;
+        width: 100%; /* Ensure the image fills its container */
     }
 
     .hero-image img {
-        width: 80%;
+        width: 100%;
         height: auto; /* Maintain aspect ratio */
         border-radius: 8px; /* Optional: rounded corners */
     }
 
     .hero-content {
-        padding-top: 20px; /* Adjust padding for smaller screens */
+        padding-bottom: 20px; /* Adjust padding for smaller screens */
+        
     }
 }
 
@@ -291,16 +315,17 @@ h2::after {
 
     /* Transform the hamburger icon into a close (X) when checked */
     .nav-toggle:checked + .nav-toggle-label span {
-        background: transparent;
-    }
+        background: transparent;    }
 
     .nav-toggle:checked + .nav-toggle-label span::before {
         transform: rotate(45deg);
+        background-color: #953553;
         top: 0;
     }
 
     .nav-toggle:checked + .nav-toggle-label span::after {
         transform: rotate(-45deg);
+        background-color: #953553;
         top: 0;
     }
 
@@ -311,7 +336,6 @@ h2::after {
  .footer {
     background: #953553;
     padding: 30px 0px;
-    font-family: 'Play', sans-serif;
     text-align: center;
 }
 

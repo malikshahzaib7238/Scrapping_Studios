@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Anna Robert</title>
     <link rel="stylesheet" href="../css/contact.css">
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <!-- Header Section -->
@@ -46,7 +51,12 @@
             </form>
         </div>
         <div class="hero-image">
-            <img src="../assets/scrap1.jpg" alt="Contact Us">
+            <dotlottie-player 
+                src="https://lottie.host/82a29b75-160b-48d3-97b6-f5808c180a0b/NXfMe8vuBb.json"
+                autoplay
+                loop
+                style="width: 50%; height: 50%;">
+            </dotlottie-player>
         </div>
     </section>
     
@@ -62,7 +72,7 @@
         
         <div class="row">
         <ul>
-            <li><a href="pages/about.html">About Us</a></li>
+            <li><a href="../pages/about.html">About Us</a></li>
         <li><a href="../pages/contact.html">Contact us</a></li>
         <li><a href="../pages/services.html">Our Services</a></li>
         <li><a href="../pages/announcements.html">Announcements</a></li>
