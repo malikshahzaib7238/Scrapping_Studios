@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Anna Robert</title>
     <link rel="stylesheet" href="../css/contact.css">
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
     <!-- Header Section -->
     <header>
@@ -31,36 +33,69 @@
                 <li><a href="../pages/services.html">Services</a></li>
                 <li><a href="../pages/announcements.html">Announcements</a></li>
                 <li><a href="../pages/contact.html">Contact</a></li>
+                <li class="color-picker-dropdown">
+                    <button id="color-picker-btn">
+                        🎨 <!-- Color picker icon -->
+                    </button>
+                    <!-- Dropdown Content -->
+                    <div id="color-picker-dropdown" class="dropdown-content">
+                        <label for="header-color">Header Color:</label>
+                        <input type="color" id="header-color">
+                        <label for="body-color">Body Color:</label>
+                        <input type="color" id="body-color">
+                        <label for="footer-color">Footer Color:</label>
+                        <input type="color" id="footer-color">
+                        <button onclick="applyColors()">Apply</button>
+                        <button onclick="resetColors()">Reset</button>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <!-- Left Column: Hero Content -->
         <div class="hero-content">
             <h1>Get in Touch</h1>
             <p>We'd love to hear from you! Fill out the form below to reach us.</p>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="5" placeholder="Your Message" required></textarea>
+
+            <!-- Form with validation -->
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Your Name">
+                    <small id="nameError" class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="email" placeholder="Your Email">
+                    <small id="emailError" class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="phone" placeholder="Your Phone Number">
+                    <small id="phoneError" class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+                    <small id="messageError" class="error-message"></small>
+                </div>
+
                 <div class="cta-buttons">
                     <button type="submit" class="btn primary-btn">Send Message</button>
                 </div>
+
+                <!-- Success message -->
+                <p id="successMessage" style="color: green; display: none;">Thank you for reaching out to us!</p>
             </form>
         </div>
+
         <div class="hero-image">
-            <dotlottie-player 
-                src="https://lottie.host/82a29b75-160b-48d3-97b6-f5808c180a0b/NXfMe8vuBb.json"
-                autoplay
-                loop
-                style="width: 50%; height: 50%;">
+            <dotlottie-player src="https://lottie.host/82a29b75-160b-48d3-97b6-f5808c180a0b/NXfMe8vuBb.json" autoplay
+                loop style="width: 50%; height: 50%;">
             </dotlottie-player>
         </div>
     </section>
-    
-
     <!-- Footer -->
     <footer>
         <div class="footer">
@@ -69,21 +104,24 @@
                 <a href="#"><img src="../assets/youtube.webp" alt="YouTube" class="social-icon"></a>
                 <a href="#"><img src="../assets/twitter.png" alt="Twitter" class="social-icon"></a>
             </div>
-        
-        <div class="row">
-        <ul>
-            <li><a href="../pages/about.html">About Us</a></li>
-        <li><a href="../pages/contact.html">Contact us</a></li>
-        <li><a href="../pages/services.html">Our Services</a></li>
-        <li><a href="../pages/announcements.html">Announcements</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        </ul>
+
+            <div class="row">
+                <ul>
+                    <li><a href="../pages/about.html">About Us</a></li>
+                    <li><a href="../pages/contact.html">Contact us</a></li>
+                    <li><a href="../pages/services.html">Our Services</a></li>
+                    <li><a href="../pages/announcements.html">Announcements</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="row">
+                ANNA SCRAPBOOKING STUDIO © 2024 - All rights reserved
+            </div>
         </div>
-        
-        <div class="row">
-        ANNA SCRAPBOOKING STUDIO © 2024 - All rights reserved
-        </div>
-        </div>
-        </footer>
+    </footer>
+    <script src="../js/contact.js"></script>
+    <script src="../js/index.js"></script>
 </body>
+
 </html>

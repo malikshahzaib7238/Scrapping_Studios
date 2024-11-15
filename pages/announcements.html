@@ -33,6 +33,22 @@
                 <li><a href="../pages/services.html">Services</a></li>
                 <li><a href="../pages/announcements.html">Announcements</a></li>
                 <li><a href="../pages/contact.html">Contact</a></li>
+                <li class="color-picker-dropdown">
+                    <button id="color-picker-btn">
+                        🎨 <!-- Color picker icon -->
+                    </button>
+                    <!-- Dropdown Content -->
+                    <div id="color-picker-dropdown" class="dropdown-content">
+                        <label for="header-color">Header Color:</label>
+                        <input type="color" id="header-color">
+                        <label for="body-color">Body Color:</label>
+                        <input type="color" id="body-color">
+                        <label for="footer-color">Footer Color:</label>
+                        <input type="color" id="footer-color">
+                        <button onclick="applyColors()">Apply</button>
+                        <button onclick="resetColors()">Reset</button>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -84,7 +100,7 @@
         </div>
         </div>
         </footer>
-
+<script src="../js/index.js"></script>
 </body>
 
 </html>
