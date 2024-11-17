@@ -44,10 +44,36 @@
                         <button onclick="resetColors()">Reset</button>
                     </div>
                 </li>
+                <li class="font-style-picker-dropdown">
+                    <button id="font-style-picker-btn">🖋️</button>
+                    <div id="font-style-dropdown" class="dropdown-content">
+                        <label for="font-style">Font Style:</label>
+                        <select id="font-style">
+                            <option value="normal">Normal</option>
+                            <option value="italic">Italic</option>
+                            <option value="bold">Bold</option>
+                        </select>
+
+                        <label for="font-color">Font Color:</label>
+                        <input type="color" id="font-color" value="#ff6666"/>
+
+                        <br>
+                        <label for="section-select">Apply to: </label>
+                        <select id="section-select">
+                            <option value="header">Header</option>
+                            <option value="main">Body</option>
+                            <option value="footer">Footer</option>
+                        </select>
+
+                        <br>
+                        <button onclick="applyTextStyle()">Apply</button>
+                        <button onclick="resetTextStyle()">Reset</button>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
-
+<main>
     <!-- Hero Section -->
     <section class="hero">
         <!-- Left Column: Hero Content -->
@@ -74,6 +100,7 @@
             <img src="../assets/aout4.jpg" alt="Anna" />
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -100,7 +127,8 @@
         </div>
     </footer>
 
-<script src="../js/index.js"></script>
+<!-- <script src="../js/index.js"></script> -->
+<script src="../js/about.js"></script>
 </body>
 
 </html>

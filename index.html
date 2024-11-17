@@ -45,6 +45,34 @@
                         <button onclick="resetColors()">Reset</button>
                     </div>
                 </li>
+                <li class="font-style-picker-dropdown">
+                    <button id="font-style-picker-btn">🖋️</button>
+                    <div id="font-style-dropdown" class="dropdown-content">
+                        <label for="font-style">Font Style:</label>
+                        <select id="font-style">
+                            <option value="normal">Normal</option>
+                            <option value="italic">Italic</option>
+                            <option value="bold">Bold</option>
+                        </select>
+
+                        <label for="font-color">Font Color:</label>
+                        <input type="color" id="font-color" value="#ff6666"/>
+
+                        <br>
+                        <label for="section-select">Apply to: </label>
+                        <select id="section-select">
+                            <option value="header">Header</option>
+                            <option value=".hero">Hero</option>
+                            <option value="#features">Features</option>
+                            <option value=".testimonials">Testimonials</option>
+                            <option value="footer">Footer</option>
+                        </select>
+
+                        <br>
+                        <button onclick="applyTextStyle()">Apply</button>
+                        <button onclick="resetTextStyle()">Reset</button>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -80,7 +108,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="feature-box">
                 <div class="feature-image">
                     <img class="featureimage" src="assets/scrap3.jpg" alt="Hunza" />
@@ -140,7 +168,7 @@
                 <a href="#"><img src="assets/youtube.webp" alt="YouTube" class="social-icon"></a>
                 <a href="#"><img src="assets/twitter.png" alt="Twitter" class="social-icon"></a>
             </div>
-        
+
         <div class="row">
         <ul>
             <li><a href="pages/about.html">About Us</a></li>
@@ -150,13 +178,13 @@
         <li><a href="#">Terms & Conditions</a></li>
         </ul>
         </div>
-        
+
         <div class="row">
         ANNA SCRAPBOOKING STUDIO © 2024 - All rights reserved
         </div>
         </div>
         </footer>
-        
+
 <script src="../js/index.js"></script>
 </body>
 
