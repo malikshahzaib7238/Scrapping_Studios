@@ -15,16 +15,19 @@ function renderProducts() {
         const productBox = document.createElement("div");
         productBox.className = "product-box";
         productBox.innerHTML = `
+        <div class="product-box">
             <img src="${product.imagePath}" alt="${product.name}" class="product-image" onmouseover="showOverlay(${index})" onmouseout="hideOverlay(${index})">
             <div class="overlay" id="overlay-${index}">
                 <div class="overlay-text">
-                    <p>${product.name}</p>
-                    <p>${product.description}</p>
-                    <p>Delivery Time: ${product.deliveryTime}</p>
+                    <p class="product-name">${product.name}</p>
+                    <p class="product-description">${product.description}</p>
+                    <p class="product-delivery-time">Delivery Time: ${product.deliveryTime}</p>
                 </div>
-                <button onclick="deleteProduct(${index})">Delete</button>
+                <button onclick="deleteProduct(${index})" class="new-btn">Delete</button>
             </div>
-        `;
+        </div>
+    `;
+
         productContainer.appendChild(productBox);
     });
 }
@@ -97,3 +100,41 @@ function deleteProduct(index) {
 
 // Initial render of products
 renderProducts();
+// Select elements
+const body = document.body;
+const footer = document.querySelector("footer");
+const dropdown = document.getElementById("color-picker-dropdown");
+
+// Store initial colors for reset
+const initialBodyColor = getComputedStyle(body).backgroundColor;
+const initialFooterColor = getComputedStyle(footer).backgroundColor;
+
+// Toggle dropdown visibility
+document.getElementById("color-picker-btn").addEventListener("click", function() {
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+});
+
+// Apply selected colors
+function applyColors() {
+    const bodyColor = document.getElementById("body-color").value;
+    const footerColor = document.getElementById("footer-color").value;
+
+    body.style.backgroundColor = bodyColor; // Set body background
+    footer.style.backgroundColor = footerColor; // Set footer background
+}
+
+// Reset to original colors
+function resetColors() {
+    body.style.backgroundColor = initialBodyColor; // Reset body to initial color
+    footer.style.backgroundColor = initialFooterColor; // Reset footer to initial color
+
+    // Update color picker inputs to match initial colors
+    document.getElementById("body-color").value = rgbToHex(initialBodyColor);
+    document.getElementById("footer-color").value = rgbToHex(initialFooterColor);
+}
+
+// Utility function to convert RGB to Hex
+function rgbToHex(rgb) {
+    const [r, g, b] = rgb.match(/\d+/g).map(Number);
+    return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
+}

@@ -35,13 +35,10 @@
                         🎨 <!-- Color picker icon -->
                     </button>
                     <!-- Dropdown Content -->
-                    <div id="color-picker-dropdown" class="dropdown-content">
-                        <label for="header-color">Header Color:</label>
-                        <input type="color" id="header-color">
-                        <label for="body-color">Body Color:</label>
-                        <input type="color" id="body-color">
+                    <div id="color-picker-dropdown" class="dropdown-content">                        <label for="body-color">Body Color:</label>
+                        <input type="color" id="body-color" value="#FFF5EE">
                         <label for="footer-color">Footer Color:</label>
-                        <input type="color" id="footer-color">
+                        <input type="color" id="footer-color" value="#953553">
                         <button onclick="applyColors()">Apply</button>
                         <button onclick="resetColors()">Reset</button>
                     </div>
@@ -51,44 +48,61 @@
     </header>
 
     <main>
-        <!-- Photography Sessions Section -->
-        <section class="photography">
-            <h2>Photography Sessions</h2>
+        <section class="products">
+            <h2>Scrapbook Products</h2>
             <div class="grid-container">
-                <div class="photo-box">
-                    <img src="../assets/photo10.jpg" alt="Photography 1">
-
+                <div class="product-box">
+                    <img src="../assets/product1.jpg" alt="Product 1" class="product-image">
+                    <div class="overlay">
+                        <div class="overlay-text">Stickers</div>
+                    </div>
                 </div>
-                <div class="photo-box">
-                    <img src="../assets/photo11.jpg" alt="Photography 2">
-
+                <div class="product-box">
+                    <img src="../assets/product2.jpg" alt="Product 2" class="product-image">
+                    <div class="overlay">
+                        <div class="overlay-text">Summer Themed Sticker</div>
+                    </div>
                 </div>
-                <div class="photo-box">
-                    <img src="../assets/photo12.jpg" alt="Photography 3">
-
+                <div class="product-box">
+                    <img src="../assets/product3.jpg" alt="Product 3" class="product-image">
+                    <div class="overlay">
+                        <div class="overlay-text">Journal Book Sticker</div>
+                    </div>
                 </div>
-                <div class="photo-box">
-                    <img src="../assets/photo1.jpg" alt="Photography 4">
-
+                <div class="product-box">
+                    <img src="../assets/product4.jpg" alt="Product 4" class="product-image">
+                    <div class="overlay">
+                        <div class="overlay-text">Flower Stickers</div>
+                    </div>
                 </div>
-                <div class="photo-box">
-                    <img src="../assets/photo5.jpg" alt="Photography 5">
-
+                <div class="product-box">
+                    <img src="../assets/product5.jpg" alt="Product 5" class="product-image">
+                    <div class="overlay">
+                        <div class="overlay-text">Origami Sticekr</div>
+                    </div>
                 </div>
-                <div class="photo-box">
-                    <img src="../assets/photo6.jpg" alt="Photography 6">
-
-                </div>
-                <div class="photo-box">
-                    <img src="../assets/photo7.jpg" alt="Photography 7">
-
-                </div>
-                <div class="photo-box">
-                    <img src="../assets/photo8.jpg" alt="Photography 8">
-
+                <div class="product-box">
+                    <img src="../assets/product7.jpg" alt="Product 6" class="product-image">
+                    <div class="overlay">
+                        <div class="overlay-text">Scrap Books</div>
+                    </div>
                 </div>
             </div>
+
+            <button onclick="showAddProductForm()" id="add">Add New Product</button>
+
+            <!-- Add Product Form -->
+            <div id="add-product-form" style="display:none;">
+                <h3>Add New Product</h3>
+                <input type="text" id="product-name" placeholder="Product Name" required>
+                <input type="text" id="product-description" placeholder="Product Description" required>
+                <input type="text" id="delivery-time" placeholder="Delivery Time" required>
+                <input type="file" id="product-image" required>
+                <button onclick="addProduct()">Save Product</button>
+                <button onclick="hideAddProductForm()">Cancel</button>
+            </div>
         </section>
+
 
         <!-- Courses Section -->
         <section class="courses">
@@ -133,61 +147,45 @@
         </section>
 
         <!-- Products Section -->
-        <section class="products">
-            <h2>Scrapbook Products</h2>
+
+        <!-- Photography Sessions Section -->
+        <section class="photography">
+            <h2>Photography Sessions</h2>
             <div class="grid-container">
-                <div class="product-box">
-                    <img src="../assets/product1.jpg" alt="Product 1" class="product-image">
-                    <div class="overlay">
-                        <div class="overlay-text">Stickers</div>
-                    </div>
-                </div>
-                <div class="product-box">
-                    <img src="../assets/product2.jpg" alt="Product 2" class="product-image">
-                    <div class="overlay">
-                        <div class="overlay-text">Summer Themed Sticker</div>
-                    </div>
-                </div>
-                <div class="product-box">
-                    <img src="../assets/product3.jpg" alt="Product 3" class="product-image">
-                    <div class="overlay">
-                        <div class="overlay-text">Journal Book Sticker</div>
-                    </div>
-                </div>
-                <div class="product-box">
-                    <img src="../assets/product4.jpg" alt="Product 4" class="product-image">
-                    <div class="overlay">
-                        <div class="overlay-text">Flower Stickers</div>
-                    </div>
-                </div>
-                <div class="product-box">
-                    <img src="../assets/product5.jpg" alt="Product 5" class="product-image">
-                    <div class="overlay">
-                        <div class="overlay-text">Origami Sticekr</div>
-                    </div>
-                </div>
-                <div class="product-box">
-                    <img src="../assets/product7.jpg" alt="Product 6" class="product-image">
-                    <div class="overlay">
-                        <div class="overlay-text">Scrap Books</div>
-                    </div>
-                </div>
-            </div>
+                <div class="photo-box">
+                    <img src="../assets/photo10.jpg" alt="Photography 1">
 
-            <button onclick="showAddProductForm()" class="btn primary-btn">Add New Product</button>
+                </div>
+                <div class="photo-box">
+                    <img src="../assets/photo11.jpg" alt="Photography 2">
 
-            <!-- Add Product Form -->
-            <div id="add-product-form" style="display:none;">
-                <h3>Add New Product</h3>
-                <input type="text" id="product-name" placeholder="Product Name" required>
-                <input type="text" id="product-description" placeholder="Product Description" required>
-                <input type="text" id="delivery-time" placeholder="Delivery Time" required>
-                <input type="file" id="product-image" required>
-                <button onclick="addProduct()">Save Product</button>
-                <button onclick="hideAddProductForm()">Cancel</button>
+                </div>
+                <div class="photo-box">
+                    <img src="../assets/photo12.jpg" alt="Photography 3">
+
+                </div>
+                <div class="photo-box">
+                    <img src="../assets/photo1.jpg" alt="Photography 4">
+
+                </div>
+                <div class="photo-box">
+                    <img src="../assets/photo5.jpg" alt="Photography 5">
+
+                </div>
+                <div class="photo-box">
+                    <img src="../assets/photo6.jpg" alt="Photography 6">
+
+                </div>
+                <div class="photo-box">
+                    <img src="../assets/photo7.jpg" alt="Photography 7">
+
+                </div>
+                <div class="photo-box">
+                    <img src="../assets/photo8.jpg" alt="Photography 8">
+
+                </div>
             </div>
         </section>
-
         <!-- Pricing Section -->
         <section class="pricing">
             <h2>Pricing Table</h2>
@@ -197,8 +195,8 @@
                     <th>Price</th>
                 </tr>
                 <tr>
-                    <td>Photography Session</td>
-                    <td>$200</td>
+                    <td>Scrapbook Products</td>
+                    <td>Varies</td>
                 </tr>
                 <tr>
                     <td>Scrapbook Course</td>
@@ -209,8 +207,8 @@
                     <td>$150</td>
                 </tr>
                 <tr>
-                    <td>Scrapbook Products</td>
-                    <td>Varies</td>
+                    <td>Photography Session</td>
+                    <td>$200</td>
                 </tr>
             </table>
         </section>

@@ -1,3 +1,16 @@
+:root {
+    /* Color Variables */
+    --main-bg-color: #FFF5EE;
+    --main-text-color: #333;
+    --accent-color: #ff6666;
+    --hover-color: #953553;
+
+    /* Font Variables */
+    --primary-font: 'Arial', sans-serif;
+    --secondary-font: 'Syne', sans-serif;
+}
+
+
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
@@ -219,7 +232,7 @@ h2 {
 /* Blog Announcements Section */
 .blog-announcements {
     padding: 20px 20px;
-    background-color: #FFF5EE;
+    /* background-color: #FFF5EE; */
     width: 100%;
     margin-top: 50px;
     border-radius: 10px;
@@ -446,7 +459,7 @@ tr:hover {
     transition: background-color 0.3s ease; /* Smooth transition */
 }
  /* Footer */
- .footer {
+ footer {
     background: #953553;
     padding: 30px 0px;
     text-align: center;
